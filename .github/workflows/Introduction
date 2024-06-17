@@ -1,0 +1,69 @@
+people = ["Rolf", "Bob", "Anne"] # Lists are surrounded by square brackets
+
+ # if people = [["Rolf", 25], ["Bob", 24], ["Anne", 27]] print(people[0][0]) prints Rolf
+
+print(len(people)) # finds the length of the list
+
+people.append("Jen") # adds a new element to the list
+
+people.remove("Bob") # removes an element from the list
+
+print(people)
+
+############################### Tuples #########################################
+
+people = ("Rolf", "Bob", "Anne") # Tuples are surrounded by parenthesis, not square brackets
+
+# people.append("Jen") # This will give an error
+
+people = people + ("Jen",) # This will add a new element to the tuple, comma is required
+
+############################### Sets #########################################
+
+art_friends = {"Rolf", "Anne"} # sets must use curly brackets, they cannot contain duplicates
+
+science_Friends = {"Jen", "Charlie"}
+
+art_friends.add("Jen") # This will add a new element to the set, does not need a curly bracket
+
+#friend = input("enter name of friend: ") art_friends.add(friend) an input does not need quoatation marks
+
+art_friends.remove("Rolf") # This will remove an element from the set
+
+# Sets are good for comparing sets to find common elements
+
+art_friends = {"Rolf", "Anne", "Jen"}
+
+science_friends = {"Jen", "Charlie"}
+
+art_but_not_science = art_friends.difference(science_friends) # This will find the elements that are in art_friends but not in science_friends
+
+science_but_not_art = science_friends.difference(art_friends) # This will find the elements that are in science_friends but not in art_friends
+
+not_in_both = art_friends.symmetric_difference(science_friends) # This will find the elements that are not in both sets
+
+art_and_science = art_friends.intersection(science_friends) # This will find the elements that are in both sets
+
+all_friends = art_friends.union(science_friends) # This will find all the elements in both sets
+
+############################### Dictionaries #########################################
+
+friend_ages = {"Rolf": 24, "Adam": 30, "Anne": 27}
+
+print(friend_ages["Rolf"]) # This will print 24
+
+friend_ages["Bob"] = 20 # This will add a new element to the dictionary
+
+friend_ages["Rolf"] = 25 # This will change the value of an existing element, dictionaries do not have duplicate keys
+
+friends = [("Rolf", 24), ("Adam", 30), ("Anne", 27)] # list of tuples
+
+friend_ages = dict(friends) # This will convert the list of tuples to a dictionary
+
+############################### Joining a list #########################################
+
+friends = ["Rolf", "Anne", "Charlie"]
+
+comma_separated = ", ".join(friends) # This will join the elements of the list with a comma and a space
+
+print(f"My friends are {comma_separated}.")
